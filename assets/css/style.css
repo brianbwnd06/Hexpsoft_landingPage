@@ -9,6 +9,7 @@
     --text-color :#1F1F1F ;
     --text-color-alt :#757575 ;
 
+    --card-bg : #FFFFFF;
     --card-shadow : 3px 6px 25px rgba(0,0,0,.2);
     --card-shadow2 : 1px 3px 5px rgba(0,0,0,.15);
 
@@ -61,8 +62,9 @@ body.dark{
     --text-color :#FFFFFF ;
     --text-color-alt :#ACACAC ;
 
-    --card-shadow : 3px 2px 15px rgba(255,255,255,0.15);
+    --card-shadow : 3px 2px 15px rgba(0, 0, 0, 0.15);
     
+    --card-bg : #2e2e2e;
     --navbar-active :  rgba(0,0,0,0.2);
     --primary-blur : rgba(27,156,133,0.2);
     --second-blur :  rgba(255,195,72,0.1);
@@ -72,6 +74,9 @@ body.dark{
 
 }
 
+.swiper-wrapper {
+   display: none !important;
+  }
 
 /*=================== Navbar ==================*/
 .navbar{
@@ -119,13 +124,15 @@ body.dark{
     padding: 5px 0;
     position: relative;
 }
-.navbar .nav-menu li::before{
-    content: '';
-
+.navbar .nav-menu li.active a{
+    color: var(--primary-color);
 }
 .navbar .nav-menu li a{
     font-size: 14px;
     color: var(--text-color);
+}
+.navbar .nav-menu li a:hover{
+    color: var(--primary-color);
 }
 .navbar .nav-menu .btn-mode{
     background: none;
@@ -413,7 +420,117 @@ body.dark{
     font-style: italic;
 }
 /*=================== Services ==================*/
+.service-content{
+    position: relative;
+    z-index: 2;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
 
+}
+.service-content .btn-lihat-lengkap{
+    background-color: var(--second-color);
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    color: var(--text-white);
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow2);
+    cursor: pointer;
+}
+.service-content .btn-lihat-lengkap:hover{
+    background-color: var(--hover-seconf);
+}
+.service-content .card-box{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 50px;
+    column-gap: 30px;
+    padding-bottom: 3rem;
+}
+.service-content .card-box .card{
+    position: relative;
+    background-color: var(--card-bg) ;
+    box-shadow: var(--card-shadow);
+    padding: 2rem 1rem 3rem 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.service-content .card-box .card .img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+.service-content .card-box .card .img img{
+    width: 100%;
+    height: 100%;
+}
+.service-content .card-box .card .title{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.service-content .card-box .card .detail{
+    font-size: 14px;
+    text-align: center;
+    color: var(--text-color-alt);
+    line-height: 1.2;
+}
+.service-content .card-box .card .btn-detail{
+    position: absolute;
+    background-color: var(--primary-color);
+    width: 65%;
+    height: 45px;
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%);
+    color: var(--text-white);
+    border: none;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.service-content .card-box .card .btn-detail:hover{
+    background-color: var(--hover-primary);
+}
+.service-content .teknologi{
+    margin-top: 50px;
+}
+.service-content .teknologi .title{
+    font-size: 16px;
+    color: var(--primary-color);
+    text-align: center;
+}
+.service-content .teknologi .tek-wrapper{
+    margin-top: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(8,1fr);
+}
+.service-content .teknologi .tek-wrapper .card-tek{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3px;
+   
+}
+.service-content .teknologi .tek-wrapper .card-tek img{
+    width: 70px;
+}
+.service-content .teknologi .tek-wrapper .card-tek p{
+    font-size: 12px;
+    color: var(--text-color-alt);
+}
 
 /*=================== Projects ==================*/
 
@@ -586,6 +703,7 @@ body.dark{
 
 /* =============== MEDIA QUERY ============ */
 @media screen and (max-width : 600px) {
+  
     .navbar,.container{
         padding: 0 1rem;
     }
@@ -873,7 +991,82 @@ body.dark{
         color: var(--text-color-alt);
         font-style: italic;
     }
-    
+
+      /*=================== Service ==================*/
+      .service-content .card-box{
+        column-gap: 10px;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .service-content .card-box .card{
+        padding: 2rem 1rem 2rem 1rem;
+        box-shadow: none;
+      
+    }
+    .service-content .swiper-slide .img{
+        width: 90px;
+        height: 90px;
+    }
+    .service-content .swiper-slide .img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .service-content .swiper-slide .title{
+        font-size: 17px;
+        text-align: center;
+        line-height: 1;
+        margin-bottom: 5px;
+    }
+    .service-content .swiper-slide .detail{
+        font-size: 13px;
+    }
+    .service-content .swiper-slide .btn-detail{
+        background: none;
+        box-shadow: none;
+        border: none;
+        color: var(--primary-color);
+        width: 100%;
+        position: relative;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+ 
+
+    .swiper-wrapper{
+        display: flex !important;
+    }
+    .swiper {
+        width: 100%;
+        height: 100%;
+      }
+      
+    .service-content .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem 1.5rem 2rem 1.5rem;
+        border-radius: 10px;
+        
+      }
+      
+    .card-service{
+        display: none !important;
+    }
+    .service-content .teknologi .title{
+        font-size: 14px;
+        
+    }
+    .service-content .teknologi .tek-wrapper{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .service-content .teknologi .tek-wrapper .card-tek img{
+        width: 50px;
+    }
     /*=================== Contact ==================*/
     .contact-content{
         flex-direction: column;
@@ -1030,6 +1223,11 @@ body.dark{
         width: 100%;
     }
    
+
+    /*=================== Service ==================*/
+    .service-content .card-box{
+        grid-template-columns: repeat(2,1fr);
+    }
     /*=================== Contact ==================*/
 
     .contact-content .contact-left{

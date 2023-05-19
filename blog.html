@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HexpSoft</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/img/LogoHS.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="OwlCarousel/dist/assets/owl.carousel.css">
+    <link rel="stylesheet" href="OwlCarousel/dist/assets/owl.theme.default.css">
+</head>
+
+<body>
+    <!-- ====== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-logo">
+            <!-- <img src="assets/img/LogoHS.png" alt=""> -->
+            <div class="img"></div>
+            <h3>Hexp<span>Soft</span></h3>
+        </a>
+        <ul class="nav-menu" id="nav-menu">
+            <button class="btn-mode" id="btn-mode">
+                <i class="fa-solid fa-moon" id="icon-mode"></i>
+            </button>
+            <button class="btn-mode-mobile" id="btn-mode-mobile">
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-sun"></i>
+            </button>
+        </ul>
+        <div class="hamMenu" id="hamMenu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <section class="section">
+        <!-- Set up your HTML -->
+        <div class="owl-carousel">
+            <div> Your Content </div>
+            <div> Your Content </div>
+            <div> Your Content </div>
+            <div> Your Content </div>
+            <div> Your Content </div>
+            <div> Your Content </div>
+            <div> Your Content </div>
+        </div>
+    </section>
+    <script src="assets/js/script.js"></script>
+    <!-- owl Carousel -->
+    <script type="text/javascript" src="OwlCarousel/dist/owl.carousel.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                stagePadding: 50,
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            })
+        });
+    </script>
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

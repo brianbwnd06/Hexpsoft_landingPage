@@ -14,22 +14,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
 </head>
 
 <body>
     <!-- ====== NAVBAR ===== -->
     <nav class="navbar" id="navbar">
-        <div class="nav-logo">
+        <a href="index.html" class="nav-logo">
             <!-- <img src="assets/img/LogoHS.png" alt=""> -->
             <div class="img"></div>
             <h3>Hexp<span>Soft</span></h3>
-        </div>
+        </a>
         <ul class="nav-menu" id="nav-menu">
-            <li class="list-menu"><a href="#">Home</a></li>
-            <li class="list-menu"><a href="#about">About</a></li>
-            <li class="list-menu"><a href="#service">Services</a></li>
-            <li class="list-menu"><a href="#project">Projects</a></li>
-            <li class="list-menu"><a href="#contact">Contact</a></li>
+            <li class="list-menu"><a href="">Beranda</a></li>
+            <li class="list-menu"><a href="#about">Tentang Kami</a></li>
+            <li class="list-menu"><a href="#service">Layanan</a></li>
+            <li class="list-menu"><a href="#project">Partner</a></li>
+            <li class="list-menu"><a href="#contact">Kontak</a></li>
+            <li class="list-menu"><a href="blog.html">Blog</a></li>
             <button class="btn-mode" id="btn-mode">
                 <i class="fa-solid fa-moon" id="icon-mode"></i>
             </button>
@@ -54,7 +58,7 @@
             <div class="bg-blur"></div>
             <div class="hero-content">
                 <div class="hero-left">
-                    <h3>Hello, selamat datang</h3>
+                    <h3>Halo, selamat datang</h3>
                     <h2>Wujudkan Website Impian <br> Bersama Kami</h2>
                     <p>Solusi terbaik untuk kebutuhan pembuatan website Anda
                         kami siap untuk membantu Anda membangun website
@@ -73,7 +77,7 @@
         <!-- ====== ABOUT US ===== -->
         <section class="section about" id="about">
             <div class="bg-blur"></div>
-            <h3 class="section-name">About Us</h3>
+            <h3 class="section-name">Tentang Kami</h3>
             <div class="about-content">
                 <div class="about-left">
                     <img src="assets/img/Layer_5.png" alt="">
@@ -88,8 +92,8 @@
                         anda tertarik untuk menggunakan jasa kami.
                         silahkan hubungi kami</p>
                     <div class="btn-grup">
-                        <a href="" class="btn-hubungi">Hubungi Kami</a>
-                        <a href="" class="btn-hubungi">Last Project</a>
+                        <a href="" class="btn-hubungi">Hubungi</a>
+                        <a href="" class="btn-hubungi">Layanan</a>
                     </div>
                 </div>
             </div>
@@ -172,19 +176,163 @@
         <!-- ====== SERVICES ===== -->
         <section class="section" id="service">
             <div class="bg-blur"></div>
-            <h3 class="section-name">Services</h3>
+            <h3 class="section-name">Layanan</h3>
+            <div class="service-content">
+                <div class="card-box card-service">
+                    <div class="card">
+                        <div class="img">
+                            <img src="assets/img/responsive-website.png" width="70" alt="">
+                        </div>
+                        <h3 class="title">Responsive Website</h3>
+                        <p class="detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et dicta
+                            dolorem qui, debitis saepe quae. Cum
+                        <p>
+                            <button class="btn-detail">Baca selengkapnya <i
+                                    class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    <div class="card">
+                        <div class="img">
+                            <img src="assets/img/design-folder.png" width="70" alt="">
+                        </div>
+                        <h3 class="title">Desain Website</h3>
+                        <p class="detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et dicta
+                            dolorem qui, debitis saepe quae. Cum
+                        <p>
+                            <button class="btn-detail">Baca selengkapnya <i
+                                    class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    <div class="card">
+                        <div class="img">
+                            <img src="assets/img/web.png" width="70" alt="">
+                        </div>
+                        <h3 class="title">Aplikasi Web</h3>
+                        <p class="detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et dicta
+                            dolorem qui, debitis saepe quae. Cum
+                        <p>
+                            <button class="btn-detail">Baca selengkapnya <i
+                                    class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    <div class="card">
+                        <div class="img">
+                            <img src="assets/img/dashboard.png" width=" 70" alt="">
+                        </div>
+                        <h3 class="title">Sistem Informasi</h3>
+                        <p class="detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et dicta
+                            dolorem qui, debitis saepe quae. Cum
+                        <p>
+                            <button class="btn-detail">Baca selengkapnya <i
+                                    class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <!-- <button class="btn-lihat-lengkap">
+                    Lihat Semua
+                </button> -->
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="assets/img/responsive-website.png" width="70" alt="">
+                            </div>
+                            <h3 class="title">Responsive Website</h3>
+                            <p class="detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et
+                                dicta
+                                dolorem qui, debitis saepe quae. Cum
+                            <p>
+                                <button class="btn-detail">Baca selengkapnya <i
+                                        class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="assets/img/design-folder.png" width="70" alt="">
+                            </div>
+                            <h3 class="title">Desain Website</h3>
+                            <p class="detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et
+                                dicta
+                                dolorem qui, debitis saepe quae. Cum
+                            <p>
+                                <button class="btn-detail">Baca selengkapnya <i
+                                        class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="assets/img/web.png" width="70" alt="">
+                            </div>
+                            <h3 class="title">Aplikasi Web</h3>
+                            <p class="detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et
+                                dicta
+                                dolorem qui, debitis saepe quae. Cum
+                            <p>
+                                <button class="btn-detail">Baca selengkapnya <i
+                                        class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="assets/img/dashboard.png" width="70" alt="">
+                            </div>
+                            <h3 class="title">Sistem Informasi</h3>
+                            <p class="detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et
+                                dicta
+                                dolorem qui, debitis saepe quae. Cum
+                            <p>
+                                <button class="btn-detail">Baca selengkapnya <i
+                                        class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="teknologi">
+                    <p class="title">Teknologi yang digunakan</p>
+                    <div class="tek-wrapper">
+                        <div class="card-tek">
+                            <img src="assets/img/tek-icon/html.png" alt="">
+                            <p>Html 5</p>
+                        </div>
+                        <div class="card-tek">
+                            <img src="assets/img/tek-icon/css3.png" alt="">
+                            <p>Css 3</p>
+                        </div>
+                        <div class="card-tek">
+                            <img src="assets/img/tek-icon/javascript.png" alt="">
+                            <p>Javascript</p>
+                        </div>
+                        <div class="card-tek">
+                            <img src="assets/img/tek-icon/bootstrap.png" alt="">
+                            <p>Boostrap</p>
+                        </div>
+                        <div class="card-tek">
+                            <img src="assets/img/tek-icon/tailwind-css.png" alt="">
+                            <p>Tailwind Css</p>
+                        </div>
+                        <div class="card-tek">
+                            <img src="assets/img/tek-icon/mysql.png" alt="">
+                            <p>My SQL</p>
+                        </div>
+                        <div class="card-tek">
+                            <img src="assets/img/tek-icon/php.png" alt="">
+                            <p>PHP</p>
+                        </div>
+                        <div class="card-tek">
+                            <img src="assets/img/tek-icon/laravel.png" alt="">
+                            <p>Laravel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- ====== PROJECT ===== -->
         <section class="section" id="project">
             <div class="bg-blur"></div>
-            <h3 class="section-name">Projects</h3>
+            <h3 class="section-name">Partner</h3>
+
         </section>
         <!-- ====== CONTACT ===== -->
         <section class="section contact" id="contact">
             <div class="bg-blur"></div>
             <div class="right-text">
-                <h2>Any Question?</h2>
-                <p>Send message for us</p>
+                <h2>Ada Pertanyaan?</h2>
+                <p>Kirim pesan untuk kami</p>
             </div>
             <div class="contact-content">
                 <div class="contact-left">
@@ -194,22 +342,22 @@
 
                     <form action="#" method="post">
                         <div class="input-grup">
-                            <label for="#">Full Name</label>
+                            <label for="#">Nama Lengkap</label>
                             <input type="text">
                         </div>
                         <div class="input-grup">
-                            <label for="#">Email Address</label>
+                            <label for="#">Email</label>
                             <input type="text">
                         </div>
                         <div class="input-grup">
-                            <label for="#">Phone Number</label>
-                            <input type="text">
+                            <label for="#">Telepon</label>
+                            <input type="number">
                         </div>
                         <div class="input-grup">
-                            <label for="#">Message</label>
+                            <label for="#">Pesan Anda</label>
                             <textarea name="" id="" cols="30" rows="10"></textarea>
                         </div>
-                        <button type="submit" class="btn-send">Send message</button>
+                        <button type="submit" class="btn-send">Kirim</button>
                     </form>
                 </div>
             </div>
@@ -244,7 +392,7 @@
             </div>
         </div>
         <div class="footer-right">
-            <p>Follow us</p>
+            <p>Ikuti kami</p>
             <div class="footer-sosmed">
                 <a href="#" class="footer-sosmed"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="#" class="footer-sosmed"><i class="fa-brands fa-instagram"></i></a>
@@ -253,7 +401,21 @@
             </div>
         </div>
     </footer>
-    <script src="assets/js/script.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
 </body>
 
 </html>
