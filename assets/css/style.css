@@ -195,14 +195,42 @@ body.dark{
     place-items: center;
     right: -4px;
     top: -2px;
+    animation: myAnim 1s ease 0s infinite normal forwards;
 }
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+		transform-origin: center center;
+	}
 
+	10% {
+		animation-timing-function: ease-in;
+		transform: scale(0.91);
+	}
+
+	17% {
+		animation-timing-function: ease-out;
+		transform: scale(0.98);
+	}
+
+	33% {
+		animation-timing-function: ease-in;
+		transform: scale(0.87);
+	}
+
+	45% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
+}
 
 /*=================== Section ==================*/
 .section{
     width: 100%;
     position: relative;
     padding-top: 80px;
+
 }
 .section .section-name{
     text-align: center;
@@ -227,6 +255,8 @@ body.dark{
     background-color: var(--second-blur);
     /* background-color: red; */
 }
+
+
 
 #service,#project{
     min-height: 100vh;
@@ -514,7 +544,7 @@ body.dark{
     margin-top: 20px;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(8,1fr);
+    grid-template-columns: repeat(9,1fr);
 }
 .service-content .teknologi .tek-wrapper .card-tek{
     display: flex;
@@ -532,9 +562,111 @@ body.dark{
     color: var(--text-color-alt);
 }
 
-/*=================== Projects ==================*/
+/*=================== PARTNER ==================*/
+.partner .teknologi{
+    margin-top: 50px;
+    position: relative;
+    z-index: 2;
+}
+.partner .teknologi .title{
+    font-size: 16px;
+    color: var(--primary-color);
+    text-align: center;
+}
+.partner .teknologi .tek-wrapper{
+    margin-top: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(6,1fr);
+}
+.partner .teknologi .tek-wrapper .card-tek{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3px;
+   
+}
+.partner .teknologi .tek-wrapper .card-tek img{
+    width: 100px;
+}
 
 
+/*=================== Testimoni ==================*/
+.testimoni{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 40vh;
+    margin: 5rem 0;
+    /* background-color: rgba(0,0,0,0.2); */
+    padding: 0 10rem;
+}
+.testimoni .title{
+    color: var(--primary-color);
+    text-align: center;
+}
+.testimoni .title2 {
+    text-align: center;
+    color: var(--text-color-alt);
+}
+.testimoni .testimoni-card-box{
+    display: flex !important;
+}
+.testimoni .testimoni-card-box .swiper-slide{
+    /* background-color: #FFF; */
+    height: 350px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding-left: 4rem;
+  
+}
+.testimoni .testimoni-card-box .swiper-slide .img{
+    width: 90%;
+    height: 200px;
+    position: relative;
+    z-index: 4;
+}
+
+.testimoni .testimoni-card-box .swiper-slide .img::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: 1;
+    rotate: 19deg;
+
+
+
+}
+.testimoni .testimoni-card-box .swiper-slide .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    position: relative;
+    z-index: 3;
+
+ 
+}
+.testimoni .testimoni-card-box .swiper-slide .text .pesan{
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+.testimoni .testimoni-card-box .swiper-slide .text .nama{
+    color: var(--primary-color);
+    font-size: 18px;
+    font-size: 600;
+}
+.testimoni .testimoni-card-box .swiper-slide .text .pekerjaan{
+    font-size: 13px;
+    color: var(--text-color-alt);
+    transform: translateY(-5px);
+}
 /*=================== Contact ==================*/
 .contact-content{
     display: flex;
@@ -585,7 +717,7 @@ body.dark{
 .contact-content .contact-right form .input-grup textarea{
     height: 35px;
     border-radius:10px;
-    border:none;
+    border:1px solid rgba(0,0,0,.15);
     outline: none;
     padding: 0 10px;
     font-size: 14px;
@@ -1067,6 +1199,43 @@ body.dark{
     .service-content .teknologi .tek-wrapper .card-tek img{
         width: 50px;
     }
+    /*=================== Partner ==================*/
+    .partner .teknologi .tek-wrapper{
+        margin-top: -30px;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .partner .teknologi .tek-wrapper .card-tek img{
+        width: 70px;
+    }
+    
+    /*=================== Testimoni ==================*/
+    .testimoni{
+        height: 80vh;
+        padding:  1rem;
+    }
+    .testimoni .testimoni-card-box .swiper-slide{
+        padding-left: 0;
+        flex-direction: column;
+        padding-top: 3rem;
+    
+    }
+    .testimoni .testimoni-card-box .swiper-slide .img{
+        width: 70%;
+        height: 200px;
+        position: relative;
+        z-index: 4;
+    }
+
+
+    .testimoni .testimoni-card-box .swiper-slide .text .pesan{
+        font-size: 18px;
+        text-align: center;
+    }
+    .testimoni .testimoni-card-box .swiper-slide .text .nama,
+    .testimoni .testimoni-card-box .swiper-slide .text .pekerjaan{
+        text-align: center;
+    }
+
     /*=================== Contact ==================*/
     .contact-content{
         flex-direction: column;
@@ -1228,6 +1397,43 @@ body.dark{
     .service-content .card-box{
         grid-template-columns: repeat(2,1fr);
     }
+    .service-content .teknologi .tek-wrapper{
+        grid-template-columns: repeat(6,1fr);
+    }
+     /*=================== Partner ==================*/
+     .partner .teknologi .tek-wrapper{
+        margin-top: -30px;
+        grid-template-columns: repeat(6,1fr);
+    }
+    .partner .teknologi .tek-wrapper .card-tek img{
+        width: 90px;
+    }
+     /*=================== Testimoni ==================*/
+     .testimoni{
+        height: 80vh;
+        padding:  0 4rem;
+    }
+    .testimoni .testimoni-card-box .swiper-slide{
+        padding-left: 2rem;
+    
+    }
+    .testimoni .testimoni-card-box .swiper-slide .img{
+        width: 150%;
+        height: 200px;
+        position: relative;
+        z-index: 4;
+    }
+
+
+    .testimoni .testimoni-card-box .swiper-slide .text .pesan{
+        font-size: 18px;
+        text-align: center;
+    }
+    .testimoni .testimoni-card-box .swiper-slide .text .nama,
+    .testimoni .testimoni-card-box .swiper-slide .text .pekerjaan{
+        text-align: center;
+    }
+
     /*=================== Contact ==================*/
 
     .contact-content .contact-left{
@@ -1343,10 +1549,18 @@ body.dark{
         position: absolute;
       
     }
+        /*=================== Partner ==================*/
+        .partner .teknologi .tek-wrapper{
+            margin-top: -30px;
+            grid-template-columns: repeat(8,1fr);
+        }
+        .partner .teknologi .tek-wrapper .card-tek img{
+            width: 90px;
+        }
  
 
 } 
-@media screen and (min-width: 1500px){
+@media screen and (min-width: 1550px){
     #contact{
         height: 100vh;
     }
@@ -1363,6 +1577,15 @@ body.dark{
     .section:nth-child(5) .bg-blur{
         
         height: 1000px;
+    }
+    .hero-content .hero-left h2{
+        font-size: 2.6vw;
+        font-weight: 700;
+        line-height: 1.2;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+        /* text-shadow: 2px 3px 10px rgba(255,255,255,0.2); */
+    
     }
 
 } 
