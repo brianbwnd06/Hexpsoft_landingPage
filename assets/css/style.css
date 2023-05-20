@@ -1211,7 +1211,7 @@ body.dark{
     /*=================== Testimoni ==================*/
     .testimoni{
         height: 80vh;
-        padding:  1rem;
+        padding:  0rem;
     }
     .testimoni .testimoni-card-box .swiper-slide{
         padding-left: 0;
@@ -1411,14 +1411,14 @@ body.dark{
      /*=================== Testimoni ==================*/
      .testimoni{
         height: 80vh;
-        padding:  0 4rem;
+        padding:  0 2rem;
     }
     .testimoni .testimoni-card-box .swiper-slide{
         padding-left: 2rem;
     
     }
     .testimoni .testimoni-card-box .swiper-slide .img{
-        width: 150%;
+        width: 180%;
         height: 200px;
         position: relative;
         z-index: 4;
