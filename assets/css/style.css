@@ -344,7 +344,8 @@ body.dark{
 
 /*=================== About ==================*/
 .about{
-    min-height: 85vh;
+    height : max-content;
+    padding-bottom : 40px;
 }
 .about-content{
     position: relative;
